@@ -1,0 +1,21 @@
+.jumbotron {
+	background-color: navy;
+	color: white;
+}
+
+#clock {
+	
+}
+
+.panel > .panel-heading {
+    background-color: navy;
+    color: white;
+}
+
+.panel {
+    overflow: auto;
+}
+
+th {
+	font-weight: bold;
+}

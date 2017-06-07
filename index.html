@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Train Scheduler</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css"> <!--Reset CSS -->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> <!--Bootstrap CDN -->
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"> <!--My CSS -->
+
+	<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script> <!--jQuery CDN -->
+
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script><!-- Moment CDN -->
+
+	<script src="https://use.fontawesome.com/0d34c6ff51.js"></script>
+</head>
+
+<body onload="startTime()">
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-xs-6 col-sm-4 col-md-12">
+
+			  	<div class="jumbotron">
+			  	  <i class="fa fa-train fa-5x" aria-hidden="true"></i>
+				  <h1>Anytime Is Train Time!</h1>
+				  <p>View the Train Schedule and Add Train Routes Below</p>
+				  	<div id="clock"></div>
+				</div><!-- Jumbotron Div Close -->
+			</div>
+		</div> <!-- First Row Close -->
+
+		<div class="row">
+
+		  <div class="col-xs-6 col-sm-4 col-md-12">
+
+		  	<div class="panel panel-default">
+			  <!-- Default panel contents -->
+			  <div class="panel-heading">
+				<h3 class="panel-title">Current Train Schedule</h3>
+			  </div>
+
+			  <div class="panel-body">
+				
+			  <!-- Table -->
+			  <table class="table" id="userInput">
+			  	<thead>
+				    <tr>
+				    <th>Train Name</th>
+				    <th>Destination</th> 
+				    <th>Frequency(Min)</th>
+				    <th>Next Arrival</th>
+				    <th>Minutes Away</th>
+				  </tr>
+			  </thead>
+
+			  <tbody id="trainData">
+				  
+			  </tbody>
+			  </table>
+			  </div> <!-- Panel Body Close -->
+			</div> <!-- Train Schedule Panel Close -->
+		  </div> <!-- First Column in Second Row Close -->
+		</div> <!-- Second Row Close -->
+
+		<div class="row">
+
+			<div class="col-xs-6 col-sm-4 col-md-12">
+
+				<div class="panel panel-default">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Add Train</h3>
+				  </div>
+				  <div class="panel-body">
+
+				    <form role="form">
+		              <div class="form-group">
+		                <label for="train-input">Train Name</label>
+		                <input class="form-control" id="addTrain" type="text">
+		              </div>
+		              <div class="form-group">
+		                <label for="destination-input">Destination</label>
+		                <input class="form-control" id="addDestination" type="text">
+		              </div>
+		              <div class="form-group">
+		                <label for="first-input">First Train Time (HH:mm - Military Time)</label>
+		                <input class="form-control" id="addFirst" type="number">
+		              </div>
+		              <div class="form-group">
+		                <label for="frequency-input">Frequency (min)</label>
+		                <input class="form-control" id="addFrequency" type="number">
+		              </div>
+		              <button class="btn btn-default" id="submitTrain" type="submit">Submit</button>
+		            </form>
+
+				  </div> <!--Add Train Panel Body Close -->
+				</div> <!--Add Train Panel Close-->
+			</div> <!--First Column of Third Row Close-->
+		</div> <!--Third Row Close-->
+
+	</div> <!--Container Div Close -->
+
+
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>
